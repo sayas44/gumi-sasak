@@ -236,7 +236,6 @@ body {
     "h h h"
     "p p img"
     "c c c";
-  /* max-height: 760px; */
 }
 
 .slide h2 {
@@ -246,7 +245,7 @@ body {
 }
 
 .slide > p {
-  margin: 50px 30px;
+  margin: 0 30px;
   grid-area: p;
   font-size: 1.8rem;
   text-align: justify;
@@ -283,13 +282,18 @@ body {
   overflow: visible;
 }
 
-.card-details {
+.card img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+/* .card-details {
   color: black;
   height: 100%;
   gap: 0.5em;
   display: grid;
   place-content: center;
-}
+} */
 
 .card-button {
   transform: translate(-50%, 125%);
@@ -442,10 +446,42 @@ footer .credit a {
   #about .row .content p {
     font-size: 1.6rem;
   }
+
+  .slide {
+    grid-template-areas:
+      "h"
+      "img"
+      "p"
+      "c";
+  }
+
+  .slide img {
+    width: 80%;
+    height: 95%;
+    margin: auto;
+  }
 }
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+
+  .slide {
+    grid-template-areas:
+      "h"
+      "img"
+      "p"
+      "c";
+  }
+
+  .slide img {
+    width: 80%;
+    height: 95%;
+    margin: auto;
+  }
+
+  .slide > p {
+    margin: 0 auto;
   }
 }
