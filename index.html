@@ -191,6 +191,14 @@
       feather.replace();
     </script>
 
+    <script type="text/javascript">
+  // Mengecek apakah pengguna mengakses URL yang tidak menggunakan hash
+  if (window.location.pathname !== '/') {
+    // Redirect pengguna ke URL dengan hash
+    window.location.href = '/gumi-sasak/#' + window.location.pathname;
+  }
+</script>
+
     <!-- My Javascript -->
     <script src="js/script.js"></script>
   </body>
